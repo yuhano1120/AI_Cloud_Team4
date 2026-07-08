@@ -23,8 +23,9 @@ Provenance:
 
 - Human-directed: The assignment requirements and desired goal were provided by the student team.
 - Agent-generated: The initial code, repo structure, documentation drafts, tests, and devcontainer configuration were generated with AI assistance.
-- Human review required: The team should run the app, read every file, confirm the architecture matches the actual project idea, and edit any project-specific details before submission.
-- Team review status: Pending team review.
+- AI use mode: Operator/Agent for scaffolding code and documentation; Critic for checking assignment coverage, architecture consistency, and missing review items.
+- Human review performed: The student owner inspected the generated structure, ran the prototype tests, confirmed the GitHub repository setup, and requested targeted revisions for the CMU student-support and RAG framing.
+- Team review status: Initial student review completed for TM1 submission; final team review remains ongoing as teammates join the repository.
 
 Review checklist:
 

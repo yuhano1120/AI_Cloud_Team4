@@ -1,5 +1,5 @@
 {
-  "name": "ai-cloud-team-prototype",
+  "name": "cmu-ai-student-support-assistant",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
     "ghcr.io/devcontainers/features/aws-cli:1": {}
@@ -17,7 +17,7 @@
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
-      "label": "FastAPI prototype",
+      "label": "CMU AI Student Support Assistant API",
       "onAutoForward": "notify"
     }
   }

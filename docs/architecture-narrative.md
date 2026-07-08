@@ -18,6 +18,8 @@ The repo also includes automated tests for the health endpoint, the question end
 
 ## Planned Cloud Architecture
 
+For TM1, the cloud services described in this section are planned architecture choices for later milestones rather than already deployed production services. The current submission focuses on a working local prototype, a reproducible development environment, and a defensible path to cloud deployment.
+
 The target deployment environment is the Academy Learner Lab sandbox using AWS services. The planned runtime is a containerized backend deployed to an AWS-managed compute option available in the sandbox, such as Elastic Beanstalk, ECS, or App Runner if permitted by the course environment. Containerizing the application keeps the local devcontainer and the cloud deployment model aligned.
 
 For model-generated responses, the design keeps model access behind a service adapter. In a later milestone, that adapter can call Amazon Bedrock if it is available in the Learner Lab account, or another approved LLM API if Bedrock access is restricted. Keeping this behind an adapter prevents the API layer from depending directly on one provider's SDK, which makes the architecture easier to test and easier to change.
