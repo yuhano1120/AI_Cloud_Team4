@@ -1,0 +1,96 @@
+# CMU AI Student Support Assistant
+
+Foundation architecture for a cloud-hosted AI assistant that helps CMU students ask questions about campus resources, academic support, administrative processes, and student services.
+
+## What This Repository Contains
+
+- A reproducible VS Code devcontainer.
+- A small FastAPI prototype that accepts a CMU student question and returns a stubbed assistant response.
+- A sane project structure for future cloud, model, retrieval, and frontend work.
+- Architecture documentation and an AI provenance log for TM1 submission.
+
+## Repository Structure
+
+```text
+.
+├── .devcontainer/          # Reproducible development environment
+├── app/                    # FastAPI application code
+│   └── retrieval/          # RAG retrieval boundary and placeholder CMU context
+├── docs/                   # Architecture diagram, narrative, and provenance log
+├── scripts/                # Local helper commands
+├── tests/                  # Prototype tests
+├── pyproject.toml          # Python dependencies and tool configuration
+└── README.md               # Setup and conventions
+```
+
+## Quick Start
+
+### Option 1: Devcontainer
+
+1. Open this repository in VS Code.
+2. Choose **Reopen in Container**.
+3. Run:
+
+```bash
+pip install -e ".[dev]"
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+4. Open `http://localhost:8000/docs`.
+
+### Option 2: Local Python
+
+Use Python 3.11 or newer.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+uvicorn app.main:app --reload --port 8000
+```
+
+## Try the Prototype
+
+```bash
+curl -X POST http://localhost:8000/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Where can I find academic support at CMU?"}'
+```
+
+Expected response shape:
+
+```json
+{
+  "answer": "Stub response: ...",
+  "status": "stubbed",
+  "trace_id": "...",
+  "retrieved_context": [
+    {
+      "title": "Academic Support",
+      "content": "...",
+      "source": "stub://cmu-academic-support",
+      "score": 0.72
+    }
+  ]
+}
+```
+
+## Tests
+
+```bash
+pytest
+```
+
+## Project Conventions
+
+- Keep cloud-facing architecture decisions in `docs/architecture-narrative.md`.
+- Keep diagrams in `docs/architecture-diagram.md`.
+- Record AI-generated contributions in `docs/provenance-log.md`.
+- Application endpoints belong in `app/main.py` until the prototype grows enough to justify routers.
+- Retrieval and future RAG logic belong in `app/retrieval/`, not directly inside endpoint handlers.
+- Request and response contracts should be represented with Pydantic models.
+- New behavior should include at least one focused test in `tests/`.
+
+## Current Prototype Scope
+
+The application currently accepts a CMU student support question, calls a stubbed retrieval layer, and returns a deterministic stub answer with placeholder retrieved context. This proves the future RAG path at the module-boundary level while leaving room to connect a real model provider, a CMU resource knowledge base, authentication, feedback collection, and a deployment pipeline in later milestones.
