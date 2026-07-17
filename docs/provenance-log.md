@@ -25,6 +25,7 @@ Provenance:
 - Agent-generated: The initial code, repo structure, documentation drafts, tests, and devcontainer configuration were generated with AI assistance.
 - AI use mode: Operator/Agent for scaffolding code and documentation; Critic for checking assignment coverage, architecture consistency, and missing review items.
 - Human review performed: The student owner inspected the generated structure, ran the prototype tests, confirmed the GitHub repository setup, and requested targeted revisions for the CMU student-support and RAG framing.
+- Learner Lab validation: On 2026-07-17, the repository was cloned, installed, tested, and run inside AWS Academy Learner Lab CloudShell. The test suite passed with 4 tests, and the FastAPI prototype returned successful responses from both `/health` and `/ask`.
 - Team review status: Initial student review completed for TM1 submission; final team review remains ongoing as teammates join the repository.
 
 Review checklist:

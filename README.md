@@ -81,6 +81,10 @@ Expected response shape:
 pytest
 ```
 
+## Learner Lab Validation
+
+The prototype was validated inside AWS Academy Learner Lab CloudShell on 2026-07-17. The repository was cloned from GitHub, dependencies were installed, `pytest` passed with 4 tests, and the running FastAPI service returned successful responses from both `/health` and `/ask`.
+
 ## Project Conventions
 
 - Keep cloud-facing architecture decisions in `docs/architecture-narrative.md`.
