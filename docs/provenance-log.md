@@ -19,7 +19,7 @@ Scope:
 
 Provenance:
 
-- Human-directed: The assignment requirements and desired goal were provided by the student team.
+- Human-directed: The assignment requirements and desired goal were provided by the `student team.
 - Agent-generated: The initial code, repo structure, documentation drafts, tests, and devcontainer configuration were generated with AI assistance.
 - AI use mode: Operator/Agent for scaffolding code and documentation; Critic for checking assignment coverage, architecture consistency, and missing review items.
 - Human review performed: The student owner inspected the generated structure, ran the prototype tests, confirmed the GitHub repository setup, and requested targeted revisions for the CMU student-support and RAG framing.
