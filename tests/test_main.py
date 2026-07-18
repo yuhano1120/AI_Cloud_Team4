@@ -19,6 +19,7 @@ def test_ask_endpoint_returns_stubbed_answer() -> None:
     assert response.status_code == 200
     body = response.json()
     assert body["status"] == "stubbed"
+    assert body["provider"].startswith("stub://")
     assert "Where can I find academic support at CMU?" in body["answer"]
     assert body["trace_id"]
     assert body["retrieved_context"]
