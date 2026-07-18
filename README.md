@@ -1,3 +1,7 @@
+# TEAM 4 Members
+
+Aarohi Kulkarni, Crystal Huang, Tomas Orqueda, Yuhan Ouyang 
+
 # CMU AI Student Support Assistant
 
 Foundation architecture for a cloud-hosted AI assistant that helps CMU students ask questions about campus resources, academic support, administrative processes, and student services.

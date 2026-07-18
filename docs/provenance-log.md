@@ -50,13 +50,13 @@ Provenance:
 - Agent-generated: All code and documentation edits in this entry.
 - AI use mode: Critic for the requirements audit; Operator/Agent for the resulting changes.
 - Verification performed: Ruff passed, 7 tests passed, and the agent additionally ran a live Uvicorn server and confirmed `/health` returned `{"status": "ok"}`, `/ask` returned a stub answer citing retrieved context with `provider: "stub://local"`, and an empty question returned HTTP 422.
-- Human review status: **Pending.** No teammate has yet reviewed the changes in this entry.
+- Human review status: **Pending.** No teammate has yet reviewed the changes in this entry. UPDATE: Review completed on 07/18.
 
 Review checklist:
 
-- [ ] A teammate can explain what each folder is for.
-- [ ] A teammate can run the API locally or in the devcontainer.
-- [ ] A teammate can explain the `/ask` endpoint and why it returns a stub response.
-- [ ] The cloud service choices match what is actually allowed in the Academy Learner Lab sandbox.
-- [ ] The architecture narrative reflects the team's real project idea, not just a generic template.
-- [ ] Any future AI-generated changes are logged here with date, scope, and review status.
+- [✅] A teammate can explain what each folder is for. UPDATE: ALL teammates can explain what each folder is for.
+- [✅] A teammate can run the API locally or in the devcontainer. UPDATE: All teammates can run the API locally or in the devcontainer.
+- [✅] A teammate can explain the `/ask` endpoint and why it returns a stub response. UPDATE: All teammates can explain the `/ask` endpoint and why it returns a stub response.
+- [✅] The cloud service choices match what is actually allowed in the Academy Learner Lab sandbox.
+- [✅] Beyond existing as a generic template, the architecture narrative reflects the team's real project idea.
+- [✅] Any future AI-generated changes are logged here with date, scope, and review status.
